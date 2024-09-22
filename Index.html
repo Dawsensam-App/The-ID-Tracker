@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Worth High School - Student ID Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lake Worth High School</h1>
+        <h2>Student ID Tracker</h2>
+        <p>Designed by Sam Dawsen</p>
+        
+        <!-- Input section for student ID -->
+        <div class="input-section">
+            <input type="text" id="studentID" placeholder="Enter Student ID" />
+            <button onclick="trackID()">Track</button>
+        </div>
+
+        <!-- Warning message section -->
+        <div id="warningMessage" class="warning-message"></div>
+
+        <!-- Search section for finding student ID -->
+        <div class="search-section">
+            <input type="text" id="searchID" placeholder="Search Student ID" oninput="searchID()" />
+        </div>
+
+        <!-- Display section for tracking results -->
+        <div class="result-section">
+            <h3>Tracking Results:</h3>
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Count</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Buttons to print or download the report -->
+        <div class="buttons-section">
+            <button class="print-btn" onclick="printReport()">Print Report</button>
+            <button class="download-btn" onclick="saveAsCSV()">Save as Spreadsheet</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>All rights reserved High Tech Master</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
